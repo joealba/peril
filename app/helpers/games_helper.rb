@@ -4,7 +4,7 @@ module GamesHelper
       "&nbsp;".html_safe
     else
       reward = game.reward_for(answer)
-      link_to(number_with_delimiter(reward.score), answer_path(game, category, reward))
+      link_to(number_with_delimiter(reward.score), answer_path(game, category, reward.score))
     end
   end
 end
